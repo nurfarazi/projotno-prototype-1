@@ -1,25 +1,16 @@
 import {Component} from '@angular/core';
 import {NavController, Platform} from 'ionic-angular';
 import {InAppBrowser} from '@ionic-native/in-app-browser';
+import {DomSanitizer} from '@angular/platform-browser';
 
 @Component({
   selector: 'page-contact',
   templateUrl: 'contact.html'
 })
 export class ContactPage {
+  // videoUrl: SafeResourceUrl;
+  constructor(public navCtrl: NavController, public platform: Platform, private domSanitizer: DomSanitizer) {
 
-  constructor(public navCtrl: NavController, public platform: Platform, private iab: InAppBrowser) {}
-
-  openNow() {
-    this.platform.ready().then(() => {
-      let browser = this.iab.create('https://www.youtube.com/watch?v=5NIFKiK7XKs', '_self',
-        {
-          location: 'no',
-          mediaPlaybackRequiresUserAction: "no"
-        }
-      );
-      browser.executeScript({});
-    });
   }
-
+  videoUrl = this.domSanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/5NIFKiK7XKs');
 }
