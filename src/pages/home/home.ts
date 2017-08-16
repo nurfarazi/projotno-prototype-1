@@ -4,6 +4,7 @@ import { NavController } from 'ionic-angular';
 import { AboutPage } from '../about/about';
 import { ContactPage } from '../contact/contact';
 import { AskPage } from '../ask/ask';
+import { FacebookPage } from '../facebook/facebook';
 
 @Component({
   selector: 'page-home',
@@ -21,5 +22,9 @@ export class HomePage {
   }
   onClickAsk(){
     this.navCtrl.push(AskPage);
+  }
+
+  onClickFacebook(){
+    this.navCtrl.push(FacebookPage);
   }
 }

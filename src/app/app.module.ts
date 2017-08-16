@@ -7,6 +7,7 @@ import {AboutPage} from '../pages/about/about';
 import {ContactPage} from '../pages/contact/contact';
 import {HomePage} from '../pages/home/home';
 import {AskPage} from '../pages/ask/ask';
+import {FacebookPage} from '../pages/facebook/facebook';
 import {TabsPage} from '../pages/tabs/tabs';
 
 import {StatusBar} from '@ionic-native/status-bar';
@@ -24,6 +25,7 @@ import {YoutubePipe} from '../pipes/youtube/youtube';
     HomePage,
     TabsPage,
     AskPage,
+    FacebookPage,
     YoutubePipe
   ],
   imports: [
@@ -36,6 +38,7 @@ import {YoutubePipe} from '../pipes/youtube/youtube';
     AboutPage,
     ContactPage,
     HomePage,
+    FacebookPage,
     AskPage,
     TabsPage
   ],
